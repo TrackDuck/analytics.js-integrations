@@ -1,10 +1,10 @@
 
 SRC= $(wildcard index.js lib/*.js)
 TESTS ?= *
-BINS= node_modules/.bin
-C= $(BINS)/component
+BIN= node_modules/.bin
+C= $(BIN)/component
 TEST= http://localhost:4202
-PHANTOM= $(BINS)/mocha-phantomjs \
+PHANTOM= $(BIN)/mocha-phantomjs \
 	--setting local-to-remote-url-access=true \
 	--setting web-security=false
 
@@ -30,13 +30,16 @@ test: build server test-node
 	@$(PHANTOM) $(TEST)
 
 test-node: node_modules
-	@node_modules/.bin/mocha --reporter spec test/node.js
+	@$(BIN)/mocha --reporter spec test/node.js
 
 test-browser: build server
 	@open $(TEST)
 
 test-coverage: build server
 	@open $(TEST)/coverage
+
+test-style: node_modules
+	@$(BIN)/jscs lib/**/index.js --config=test/style.json
 
 clean:
 	rm -rf components build
