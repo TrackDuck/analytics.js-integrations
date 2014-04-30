@@ -1,6 +1,6 @@
 
 SRC= $(wildcard index.js lib/*.js)
-tests ?= *
+TESTS ?= *
 BINS= node_modules/.bin
 C= $(BINS)/component
 TEST= http://localhost:4202
@@ -23,7 +23,7 @@ node_modules: package.json
 	@npm install
 
 server: build kill
-	@tests=$(tests) node test/server &
+	@TESTS=$(TESTS) node test/server &
 	@sleep 1
 
 test: build server test-node
