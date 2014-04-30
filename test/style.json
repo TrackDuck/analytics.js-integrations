@@ -18,48 +18,17 @@
     "beforeOpeningRoundBrace": true,
     "beforeOpeningCurlyBrace": true
   },
-  "disallowMultipleVarDecl": true,
   "disallowSpacesInsideArrayBrackets": true,
   "disallowSpacesInsideParentheses": true,
   "requireSpacesInsideObjectBrackets": "allButNested",
   "disallowQuotedKeysInObjects": "allButReserved",
   "disallowSpaceAfterObjectKeys": true,
   "requireCommaBeforeLineBreak": true,
-  "disallowSpaceAfterPrefixUnaryOperators": ["++", "--", "+", "-", "~"],
-  "disallowSpaceBeforePostfixUnaryOperators": ["++", "--"],
-  "requireSpaceBeforeBinaryOperators": [
-    "+",
-    "-",
-    "/",
-    "*",
-    "=",
-    "==",
-    "===",
-    "!=",
-    "!=="
-  ],
-  "requireSpaceBeforeBinaryOperators": [
-    "+",
-    "-",
-    "/",
-    "*",
-    "=",
-    "==",
-    "===",
-    "!=",
-    "!=="
-  ],
   "disallowMultipleLineStrings": true,
   "disallowMultipleLineBreaks": true,
-  "validateQuoteMarks": {
-    "mark": "'",
-    "escape": true
-  },
-  "validateIndentation": 2,
   "disallowMixedSpacesAndTabs": true,
   "disallowTrailingWhitespace": true,
   "disallowKeywordsOnNewLine": ["else"],
-  "safeContextKeyword": ["self"],
   "requireDotNotation": true,
   "validateJSDoc": {
     "checkParamNames": true,
