@@ -26,7 +26,7 @@ server: build kill
 	@TESTS=$(TESTS) node test/server &
 	@sleep 1
 
-test: build server test-node
+test: build server test-style test-node
 	@$(PHANTOM) $(TEST)
 
 test-node: node_modules
