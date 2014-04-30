@@ -30,7 +30,7 @@ test: build server test-node
 	@$(PHANTOM) $(TEST)
 
 test-node: node_modules
-	@node_modules/.bin/mocha -R spec test/node.js
+	@node_modules/.bin/mocha --reporter spec test/node.js
 
 test-browser: build server
 	@open $(TEST)

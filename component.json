@@ -130,7 +130,7 @@
     "lib/visual-website-optimizer/index.js",
     "lib/webengage/index.js",
     "lib/woopra/index.js",
-    "lib/yandex-metric/index.js"
+    "lib/yandex-metrica/index.js"
   ],
   "json": [
     "integrations.json"

@@ -6,7 +6,6 @@ var fs = require('fs');
 var hbs = require('hbs');
 var path = require('path');
 
-
 /**
  * App.
  */
