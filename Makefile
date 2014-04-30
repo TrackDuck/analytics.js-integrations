@@ -8,7 +8,6 @@ PHANTOM= $(BINS)/mocha-phantomjs \
 	--setting local-to-remote-url-access=true \
 	--setting web-security=false
 
-
 build: node_modules components $(SRC)
 	@$(C) build --dev
 
@@ -42,5 +41,4 @@ test-coverage: build server
 clean:
 	rm -rf components build
 
-.PHONY: clean server test test-browser
-.PHONY: test-sauce test-coverage
+.PHONY: clean kill server test test-node test-browser test-coverage
